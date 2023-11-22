@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class Car {
 
     private boolean hasEngine;
@@ -53,6 +55,6 @@ public class Car {
             return false;
 
         Car car = (Car)obj;
-        return car.name.equals(this.name) && car.cntCylinder == this.cntCylinder;
+        return Objects.equals(car.name, this.name) && car.cntCylinder == this.cntCylinder;
     }
 }
