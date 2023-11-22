@@ -10,17 +10,8 @@ public class Main {
         CarSkeleton gasPoweredCar = new GasPoweredCar("gasPoweredCarName", "runs on gas", 10, 8);
         CarSkeleton hybridCar = new HybridCar("hybridCarName", "runs on both gas and electricity", 8, 360000, 7 );
 
-        carSkeleton.runEngine();
-        carSkeleton.startEngine();
-        carSkeleton.drive();
-        electricCar.runEngine();
-        electricCar.startEngine();
         electricCar.drive();
-        gasPoweredCar.runEngine();
-        gasPoweredCar.startEngine();
         gasPoweredCar.drive();
-        hybridCar.runEngine();
-        hybridCar.startEngine();
         hybridCar.drive();
     }
 }

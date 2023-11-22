@@ -11,16 +11,12 @@ public class ElectricCar extends CarSkeleton {
         this.battteryCapacity = battteryCapacity;
     }
 
-    @Override
-    public void startEngine() {
-        logClassSimpleName();
-        System.out.println(getClass().getSimpleName() + " startEngine");
+    public double getAvgKmPerCharge() {
+        return avgKmPerCharge;
     }
 
-    @Override
-    public void drive() {
-        logClassSimpleName();
-        System.out.println(getClass().getSimpleName() + " drive");
+    public int getBattteryCapacity() {
+        return battteryCapacity;
     }
 
     @Override

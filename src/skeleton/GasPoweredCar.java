@@ -11,16 +11,12 @@ public class GasPoweredCar extends CarSkeleton {
         this.cntCylinders = cntCylinders;
     }
 
-    @Override
-    public void startEngine() {
-        logClassSimpleName();
-        System.out.println(getClass().getSimpleName() + " startEngine");
+    public double getAvgKmPerLitre() {
+        return avgKmPerLitre;
     }
 
-    @Override
-    public void drive() {
-        logClassSimpleName();
-        System.out.println(getClass().getSimpleName() + " drive");
+    public int getCntCylinders() {
+        return cntCylinders;
     }
 
     @Override

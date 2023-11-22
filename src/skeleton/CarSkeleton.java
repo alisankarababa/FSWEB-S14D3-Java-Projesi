@@ -1,5 +1,7 @@
 package skeleton;
 
+import models.Car;
+
 public class CarSkeleton {
 
     private String name;
@@ -13,15 +15,25 @@ public class CarSkeleton {
         System.out.println("Class SimpleName: " + getClass().getSimpleName());
     }
     public void startEngine() {
-        logClassSimpleName();
         System.out.println("startEngine");
     }
     public void drive() {
-        logClassSimpleName();
-        System.out.println("driving");
+        runEngine(this);
+        System.out.println(name + " driving");
     }
-    protected void runEngine() {
+    protected void runEngine(CarSkeleton carSkeleton) {
         logClassSimpleName();
-        System.out.println("engine running");
+
+        if(carSkeleton instanceof ElectricCar) {
+            System.out.println("ElectricCar run engine. kmPerCharge: " +  ((ElectricCar)carSkeleton).getAvgKmPerCharge());
+        } else if (carSkeleton instanceof GasPoweredCar ) {
+            System.out.println("GasPowerCar run engine. kmPerLiter: " +  ((GasPoweredCar)carSkeleton).getAvgKmPerLitre());
+        } else if (carSkeleton instanceof HybridCar) {
+            System.out.println("HybridCar run engine. kmPerLiter: " +  ((HybridCar)carSkeleton).getAvgKmPerLitre()
+            + " kmPerCharge: " + ((HybridCar)carSkeleton).getAvgKmPerLitre());
+        } else {
+            System.out.println("nope");
+        }
+
     }
 }
